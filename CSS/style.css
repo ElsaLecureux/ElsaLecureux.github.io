@@ -33,12 +33,11 @@ h1 {
     color: var(--greenColor);
 }
 
-h2 {
+.title_work {
     color: var(--greenColor);
     font-size: 3.5rem;
 }
 
-/* Main */
 .container_profiles {
   display: flex; 
    flex-direction: row;
@@ -49,7 +48,8 @@ h2 {
     height: 17.5rem;
     border-radius: 64% 36% 47% 53% / 45% 44% 56% 55%;
     border: solid 8px #F28482;
-}   
+}
+
 /*border-radius: 56% 44% 83% 17% / 44% 23% 77% 56%  ;*/
 .photo-profil {
     width: 100%;
@@ -64,9 +64,26 @@ h2 {
     flex-direction: column;
     margin: 2rem;
 }
+/* Main */
 
+main {
+    display: flex;
+    align-items: center;
+}
+.container_presentation {
+    width: 70vw;
+}
+.title_presentation {
+    color: var(--greenColor);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
 p {
     color: black;
+    font-size: 1.8rem;
+    font-family: Raleway;
+    line-height: 2.5rem;
+    text-align: center;
 }
 
 /* Footer */ 
@@ -96,7 +113,7 @@ p {
     position: absolute;
 }
 .green {
-    background-color: #84A59D;
+    background-color: var(--greenColor);
 }
 .pink {
     background-color: #F28482;
