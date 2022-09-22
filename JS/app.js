@@ -16,12 +16,15 @@
 //J'ajoute un element img au DOM dans ma div avec la class 'photo-profil'
 
 //Je crée une div avec la class 'cointainer_links pour contenir mes liens
-//J'ajoute mes 3 liens avec leurs images
+//J'ajoute mes 3 liens avec leurs images, j'ajoute une class à chaque lien
 
 // dans le MAIN:
-// ma présentation
-// présentation de ma formation?
+// ma présentation/actuellemnt
+//j'ajoute une div, dans laquelle je mets une h2 et des paragraphe pour me décrire
+//j'ajoute une autre div avec 'container_currently' un titre 'title_currently' et des paragraphes pour parler de ma formation
 // mes projets
+//j'ajoute une div 'container_projets' pour présenter mes projets
+
 
 //dans le FOOTER:
-// juste paragraphe nom prenom, année copyright
+//J'ajoute juste paragraphe nom prenom, année avec une class name_year
