@@ -5,7 +5,7 @@
 //au clic du bouton, m'a page CV se crée en JS
 
 //créer la page:
-// dans mon HEADER:
+// dans le HEADER:
 // je souhaite avoir ma photo avec mon nom, mon activité, les liens vers mon comptes (github, linkedin,mail)
 // Je crée une div avec la class 'container_name_and_work' pour y mettre mes titres
 //Je crée un h1 avec le textContent 'Elsa Lécureux'

@@ -113,73 +113,38 @@ footer {
 .body_prepage {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 .container_loading-sign {
-    width: 50vw;
-    height: 50vh;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.loading-sign_elements {
+.dot {
     width: 20px;  
     height: 20px;
     border-radius: 50%;
-    position: absolute;
-}
-.green {
-    background-color: var(--greenColor);
-}
-.pink {
-    background-color: #F28482;
+    /*je crée une box shadow à ma div 'dot' pour obtenir des points en cercle et je change les couleurs */
+    box-shadow:
+    0 -3em rgba(242, 132, 130, 1),
+    2.25em -2.25em rgba(246, 189, 96, 1),
+    3em 0 rgba(132, 165, 157, 1),
+    2.25em 2.25em rgba(245, 202, 195, 1),
+    0 3em rgba(242, 132, 130, 1),
+    -2.25em 2.25em rgba(246, 189, 96, 1),
+    -3em 0 rgba(132, 165, 157, 1),
+    -2.25em -2.25em rgba(245, 202, 195, 1)
+    ;
+    /* J'applique l'animation à ma div 'dot' */
+    animation: loading 1.2s linear infinite;
+ }
 
-}
-.yellow {
-    background-color: #F6BD60;
-
-}
-.light-pink {
-    background-color: #F5CAC3;
-}
-.cream {
-    background-color: #F7EDE2;
-}
-/* loading signs elements positions*/
-/*.green_top  {
-    top: 0;
-   
-}   
-.green_bottom {
-bottom: ;
-right: ;
-}
-
-.yellow_top  {
-   
-}   
-.yellow_bottom {
-
-}
-
-.pink_top  {
-   
-}   
-.pink_bottom {
-
-}
-
-.cream_top  {
-    
-}   
-.cream_bottom {
-
-}
-
-.light-pink_top  {
-  
-}   
-.light-pink_bottom {
-
-}
-*/
-
+/* Je crée une animation pour faire une effet de rotation sur mon point et ses 'shadows'*/
+@keyframes loading {
+    100% { transform: rotate(-360deg) }
+  }
 /*phones*/
 @media screen and (max-width : 768px) {
     header {
