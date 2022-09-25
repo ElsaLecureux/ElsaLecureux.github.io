@@ -8,11 +8,11 @@
 }*/
 //au clic du bouton, m'a page CV se crée en JS
 
-//créer la page:
-// dans le HEADER:
-// je souhaite avoir ma photo avec mon nom, mon activité, les liens vers mon comptes (github, linkedin,mail)
+//Créer la page:
+// Dans le HEADER:
+// Je souhaite avoir ma photo avec mon nom, mon activité, les liens vers mon comptes (github, linkedin,mail):
 
-//Je récupère l'element header avec javascript:
+//Je récupère l'element header avec javascript
 const headerElm = document.querySelector('#header');
 // Je crée une div avec la class 'container_name_and_work' pour y mettre mes titres
 const containerNameWorkElm = document.createElement('div');
@@ -73,13 +73,27 @@ logoLinkedinElm.src = "./images/linkedin.svg";
 logoLinkedinElm.alt = "logo de Linkedin";
 logoLinkedinElm.classList.add('link_linkedin');
 linkLinkedinElm.append(logoLinkedinElm);
-// dans le MAIN:
-// ma présentation/actuellemnt
-//j'ajoute une div, dans laquelle je mets une h2 et des paragraphe pour me décrire
-//j'ajoute une autre div avec 'container_currently' un titre 'title_currently' et des paragraphes pour parler de ma formation
+// Dans le MAIN:
+// ma présentation/actuellemnt et mes projets:
+
+// Je récupère l'élément mainavec javascript
+const mainElm = document.querySelector('#main');
+//J'ajoute une div, dans laquelle je mets une h2 et des paragraphe pour me décrire
+const containerPresentationElm = document.createElement('div');
+containerPresentationElm.classList.add('container_presentation');
+mainElm.append(containerPresentationElm);
+const titlePresentationElm = document.createElement('h2');
+titlePresentationElm.textContent = 'Quelques mots sur moi...';
+titlePresentationElm.classList.add('title_presentation');
+containerPresentationElm.append(titlePresentationElm);
+const beforeParagraphElm = document.createElement('p');
+beforeParagraphElm.textContent = 'Pâtissière de formation, j\'ai pu pendant 10ans explorer ma créativité et faire évoluer mon organisation et ma communication en travaillant puis en dirigeant une équipe.';
+beforeParagraphElm.classList.add('before_paragraph');
+containerPresentationElm.append(beforeParagraphElm);
+//J'ajoute une autre div avec 'container_currently' un titre 'title_currently' et des paragraphes pour parler de ma formation
 // mes projets
-//j'ajoute une div 'container_projets' pour présenter mes projets
+//J'ajoute une div 'container_projets' pour présenter mes projets
 
 
-//dans le FOOTER:
+//Dans le FOOTER:
 //J'ajoute juste paragraphe nom prenom, année avec une class name_year
