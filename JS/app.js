@@ -82,18 +82,53 @@ const mainElm = document.querySelector('#main');
 const containerPresentationElm = document.createElement('div');
 containerPresentationElm.classList.add('container_presentation');
 mainElm.append(containerPresentationElm);
+//le titre
 const titlePresentationElm = document.createElement('h2');
 titlePresentationElm.textContent = 'Quelques mots sur moi...';
 titlePresentationElm.classList.add('title_presentation');
 containerPresentationElm.append(titlePresentationElm);
-const beforeParagraphElm = document.createElement('p');
-beforeParagraphElm.textContent = 'Pâtissière de formation, j\'ai pu pendant 10ans explorer ma créativité et faire évoluer mon organisation et ma communication en travaillant puis en dirigeant une équipe.';
-beforeParagraphElm.classList.add('before_paragraph');
-containerPresentationElm.append(beforeParagraphElm);
-//J'ajoute une autre div avec 'container_currently' un titre 'title_currently' et des paragraphes pour parler de ma formation
-// mes projets
-//J'ajoute une div 'container_projets' pour présenter mes projets
+//paragraphes
+const experienceParagraphElm = document.createElement('p');
+experienceParagraphElm.textContent = 'Pâtissière de formation, j\'ai pu pendant 10ans explorer ma créativité et faire évoluer mon organisation et ma communication en travaillant puis en dirigeant une équipe.';
+experienceParagraphElm.classList.add('experience_paragraph');
+containerPresentationElm.append(experienceParagraphElm);
 
+const motivationParagraphElm = document.createElement('p');
+motivationParagraphElm.textContent = 'Une envie de renouveau m\'a pousée à explorer d\'autres pistes et à retourner vers mes intérêts d\'adolescente, c\'est ainsi que je me suis mise à apprendre HTML, CSS et Javascript à l\'aide de tutoriels. Appréciant de plus en plus ce que je faisais j\'ai décidé d\'entamer une formation professionnelle afin d\'en faire mon métier.';
+motivationParagraphElm.classList.add('motivation_paragraph');
+containerPresentationElm.append(motivationParagraphElm);
+//J'ajoute une autre div avec 'container_training' un titre 'title_training' et des paragraphes pour parler de ma formation
+const containerTrainingElm = document.createElement('div');
+containerTrainingElm.classList.add('container_training');
+mainElm.append(containerTrainingElm);
+//titre
+const titleTrainingElm = document.createElement('h2');
+titleTrainingElm.textContent = 'Ma formation...';
+titleTrainingElm.classList.add('title_training');
+containerTrainingElm.append(titleTrainingElm);
+//paragraphes
+const trainingParagraphElm = document.createElement('p');
+trainingParagraphElm.textContent = `Après de longues recherches, j'ai découvert l'école O'clock qui correspondait à ce que recherchait: une formation sur 6mois, pour apprendre à coder rapidement mais sans 'rusher' les étapes, et après une réflexion sur la spécialisation, j'ai décidé de me lancer dans le full-stack Javascript. C'est avec une grande motivation et un bonheur nouveau que je me consacre depuis quelques semaines à l'apprentissage du métier de Développeur Web`;
+trainingParagraphElm.classList.add('training_paragraph');
+containerTrainingElm.append(trainingParagraphElm);
+
+// mes projets
+
+//J'ajoute une div 'container_projets' pour présenter mes projets
+const containerProjectsElm = document.createElement('div');
+containerProjectsElm.classList.add('container_projects');
+mainElm.append(containerProjectsElm);
+//titre
+const titleProjectsElm = document.createElement('h2');
+titleProjectsElm.textContent = 'Mes Projets';
+titleProjectsElm.classList.add('title_projects');
+containerProjectsElm.append(titleProjectsElm);
 
 //Dans le FOOTER:
+// Je récupère l'élément footer avec javascript
+const footerElm = document.querySelector('#footer');
 //J'ajoute juste paragraphe nom prenom, année avec une class name_year
+const footerParagraphElm = document.createElement('p');
+footerParagraphElm.textContent = 'Elsa Lécureux 2022';
+footerParagraphElm.classList.add('name_year');
+footerElm.append(footerParagraphElm);
