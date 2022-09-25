@@ -28,7 +28,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 4rem;
+    padding: 6rem;
 }
 h1 {
     font-size: 5rem;
@@ -80,7 +80,7 @@ h1 {
     flex-direction: column;
 }
 main div {
-    width: 50vw;
+    width: 150rem;
     margin-bottom: 4rem;
 }
 main h2 {
