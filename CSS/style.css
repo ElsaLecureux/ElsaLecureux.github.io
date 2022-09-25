@@ -22,7 +22,7 @@ body {
 }
 
 /* Header */
-header {
+#header {
     width: 100%;
     height: 100%;
     display: flex;
@@ -50,7 +50,7 @@ h1 {
    align-items: center;
    margin-right: 20rem;
 }
-.container_photo-profil {
+.container_photo_profil {
     width: 15rem;
     height: 17.5rem;
     border-radius: 64% 36% 47% 53% / 45% 44% 56% 55%;
@@ -58,7 +58,7 @@ h1 {
 }
 
 /*border-radius: 56% 44% 83% 17% / 44% 23% 77% 56%  ;*/
-.photo-profil {
+.photo_profil {
     width: 100%;
     height: 100%;
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70% ;
@@ -115,18 +115,24 @@ footer {
     justify-content: center;
     align-items: center;
 }
+.prepage_title {
+    font-size: 2.5rem;
+    font-weight: 600;
+}
 .container_loading-sign {
     width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 .dot {
     width: 20px;  
     height: 20px;
     border-radius: 50%;
-    /*je crée une box shadow à ma div 'dot' pour obtenir des points en cercle et je change les couleurs */
+    margin: 8rem;
+    /*je crée une box shadow à ma div 'dot' pour obtenir des points en cercle dont je change les couleurs */
     box-shadow:
     0 -3em rgba(242, 132, 130, 1),
     2.25em -2.25em rgba(246, 189, 96, 1),
@@ -138,14 +144,15 @@ footer {
     -2.25em -2.25em rgba(245, 202, 195, 1)
     ;
     /* J'applique l'animation à ma div 'dot' */
-    animation: loading 1.2s linear infinite;
+    animation: loading 1s linear; 
+    animation-iteration-count: 10;
  }
 
 /* Je crée une animation pour faire une effet de rotation sur mon point et ses 'shadows'*/
 @keyframes loading {
-    100% { transform: rotate(-360deg) }
+    100% { transform: rotate(-360deg) };
   }
-/*phones*/
+/*Responsive sur téléphone*/
 @media screen and (max-width : 768px) {
     header {
         display: flex;
