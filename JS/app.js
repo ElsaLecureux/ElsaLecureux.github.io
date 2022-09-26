@@ -89,12 +89,12 @@ titlePresentationElm.classList.add('title_presentation');
 containerPresentationElm.append(titlePresentationElm);
 //paragraphes
 const experienceParagraphElm = document.createElement('p');
-experienceParagraphElm.textContent = 'Pâtissière de formation, j\'ai pu pendant 10ans explorer ma créativité et faire évoluer mon organisation et ma communication en travaillant puis en dirigeant une équipe.';
+experienceParagraphElm.textContent = '';
 experienceParagraphElm.classList.add('experience_paragraph');
 containerPresentationElm.append(experienceParagraphElm);
 
 const motivationParagraphElm = document.createElement('p');
-motivationParagraphElm.textContent = 'Une envie de renouveau m\'a pousée à explorer d\'autres pistes et à retourner vers mes intérêts d\'adolescente, c\'est ainsi que je me suis mise à apprendre HTML, CSS et Javascript à l\'aide de tutoriels. Appréciant de plus en plus ce que je faisais j\'ai décidé d\'entamer une formation professionnelle afin d\'en faire mon métier.';
+motivationParagraphElm.textContent = '';
 motivationParagraphElm.classList.add('motivation_paragraph');
 containerPresentationElm.append(motivationParagraphElm);
 //J'ajoute une autre div avec 'container_training' un titre 'title_training' et des paragraphes pour parler de ma formation
@@ -108,7 +108,7 @@ titleTrainingElm.classList.add('title_training');
 containerTrainingElm.append(titleTrainingElm);
 //paragraphes
 const trainingParagraphElm = document.createElement('p');
-trainingParagraphElm.textContent = `Après de longues recherches, j'ai découvert l'école O'clock qui correspondait à ce que recherchait: une formation sur 6mois, pour apprendre à coder rapidement mais sans 'rusher' les étapes, et après une réflexion sur la spécialisation, j'ai décidé de me lancer dans le full-stack Javascript. C'est avec une grande motivation et un bonheur nouveau que je me consacre depuis quelques semaines à l'apprentissage du métier de Développeur Web`;
+trainingParagraphElm.textContent = ``;
 trainingParagraphElm.classList.add('training_paragraph');
 containerTrainingElm.append(trainingParagraphElm);
 
