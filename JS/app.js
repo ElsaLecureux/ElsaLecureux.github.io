@@ -1,43 +1,59 @@
 const app = {
 
     init: function () {
-        console.log('app.init!');
         app.addListenerToButtons();
         app.addListenerToCarouselItems();
+        app.addListenerToCloseModal();
     },
-    CarouselElm: document.querySelector('.carousel_wrap'),
+    CarouselElm: document.querySelector('.carousel'),
+    CarouselWrapElm: document.querySelector('.carousel_wrap'),
     Slide: document.querySelector('.carousel_item'),
+    LeftButtonElm: document.querySelector('.LeftButton'),
+    RightButtonElm: document.querySelector('.RightButton'),
+    ModalElm: document.querySelector('.modal'),
+    BackgroundContainerElm: document.querySelector('.backgrounds_container'),
+    BackgroundElm: document.querySelector('.background'),
 
     addListenerToButtons () {
-        const LeftButtonElm = document.querySelector('.LeftButton');
-        const RightButtonElm = document.querySelector('.RightButton');
-        LeftButtonElm.addEventListener('click', app.OnclickLeftButton);
-        RightButtonElm.addEventListener('click', app.OnclickRightButton);   
+        app.LeftButtonElm.addEventListener('click', app.OnclickLeftButton);
+        app.RightButtonElm.addEventListener('click', app.OnclickRightButton);   
     },
 
     OnclickLeftButton (event) {
         const slideWidth = app.Slide.clientWidth;
-        console.log(slideWidth);
-        app.CarouselElm.scrollLeft -= slideWidth;
+        app.CarouselWrapElm.scrollLeft -= slideWidth;
+        const backgroundWidth = app.BackgroundElm.clientWidth;
+        app.BackgroundContainerElm.scrollLeft -= backgroundWidth;
     },
     OnclickRightButton (event) {
         const slideWidth = app.Slide.clientWidth;
-        app.CarouselElm.scrollLeft += slideWidth;
+        app.CarouselWrapElm.scrollLeft += slideWidth;
+        const backgroundWidth = app.BackgroundElm.clientWidth;
+        app.BackgroundContainerElm.scrollLeft += backgroundWidth;
     },    
 
     addListenerToCarouselItems () {
-        const CarouselItemsElm = app.CarouselElm.querySelectorAll('.carousel_item');
-        console.log(app.CarouselElm);
-        console.log(CarouselItemsElm);
+        const CarouselItemsElm = app.CarouselWrapElm.querySelectorAll('.carousel_item');
        for (const itemElm of CarouselItemsElm) {
         itemElm.addEventListener('click', app.onClickItem);
       }    
     },
 
     onClickItem() {
-        console.log('inside the onClick');
+        app.ModalElm.style.display = 'block';
+        /*app.CarouselWrapElm.style.display = 'none';
+        app.LeftButtonElm.style.display = 'none';
+        app.RightButtonElm.style.display = 'none';*/
     },         
     
+    addListenerToCloseModal () {
+        const closeModalButton = document.querySelector('.closeModalButton');
+        closeModalButton.addEventListener('click', app.closeModal);
+    },
+
+    closeModal () {
+        app.ModalElm.style.display = 'none';
+    },
 }
 
 document.addEventListener('DOMContentLoaded', app.init );
