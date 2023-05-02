@@ -6,6 +6,7 @@ const app = {
         app.addListenerToCarouselItems();
     },
     CarouselElm: document.querySelector('.carousel_wrap'),
+    Slide: document.querySelector('.carousel_item'),
 
     addListenerToButtons () {
         const LeftButtonElm = document.querySelector('.LeftButton');
@@ -14,13 +15,14 @@ const app = {
         RightButtonElm.addEventListener('click', app.OnclickRightButton);   
     },
 
-    OnclickLeftButton () {
-        /*const slideWidth = itemElm.clientWidth;*/
-        app.CarouselElm.scrollLeft -= 350;
+    OnclickLeftButton (event) {
+        const slideWidth = app.Slide.clientWidth;
+        console.log(slideWidth);
+        app.CarouselElm.scrollLeft -= slideWidth;
     },
-    OnclickRightButton () {
-        /*const slideWidth = itemElm.clientWidth;*/
-        app.CarouselElm.scrollLeft += 350;
+    OnclickRightButton (event) {
+        const slideWidth = app.Slide.clientWidth;
+        app.CarouselElm.scrollLeft += slideWidth;
     },    
 
     addListenerToCarouselItems () {
