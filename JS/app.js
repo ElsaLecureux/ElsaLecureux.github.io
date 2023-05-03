@@ -12,43 +12,45 @@ const app = {
     LeftButtonElm: document.querySelector('.LeftButton'),
     RightButtonElm: document.querySelector('.RightButton'),
     ModalElm: document.querySelector('.modal'),
-    backgroundColors:['#97C3DE', 'blue', 'red', 'pink', 'purple'],
+    backgroundColors:['#0B1C3E','#9DA598', '#C77461', '#4AA8D9', '#CE6535', '#607748'],
     index: 0,
     
 
     addListenerToButtons () {
+        app.LeftButtonElm.classList.add('visible'); 
+        console.log(app.index);
         app.LeftButtonElm.addEventListener('click', app.OnclickLeftButton);
         app.RightButtonElm.addEventListener('click', app.OnclickRightButton);   
     },
 
     OnclickLeftButton (event) {
+        
         if (app.index > 0) {
-            document.body.style.background= app.backgroundColors[app.index];
             app.index = app.index - 1;
             const slideWidth = app.Slide.clientWidth;
-            app.CarouselWrapElm.scrollLeft -= slideWidth; 
+            app.CarouselWrapElm.scrollLeft -= slideWidth;
+            document.body.style.background= app.backgroundColors[app.index];    
         } 
-        /*if (app.index > 0) {
-            app.LeftButtonElm.style.visibility = 'visible';
-            
+        if (app.index === 0) {
+            app.LeftButtonElm.classList.add('visible');  
         }
-        else {
-            app.LeftButtonElm.style.visibility = 'hidden';
-        } */                       
+        if (app.index < 5) {
+            app.RightButtonElm.classList.remove('visible');  
+        }              
     },
     OnclickRightButton (event) {
         if (app.index < 6) {
-        document.body.style.background= app.backgroundColors[app.index];
         app.index = app.index + 1;
+        document.body.style.background= app.backgroundColors[app.index];
         const slideWidth = app.Slide.clientWidth;
         app.CarouselWrapElm.scrollLeft += slideWidth;
         }
-        /*if (app.index === 5) {
-            app.RightButtonElm.style.visibility = 'hidden';
+        if (app.index > 0) {
+            app.LeftButtonElm.classList.remove('visible');  
         }
-        else {
-            app.RightButtonElm.style.visibility = 'visible';
-        }*/
+        if (app.index === 5) {
+            app.RightButtonElm.classList.add('visible');  
+        } 
     },    
 
     addListenerToCarouselItems () {

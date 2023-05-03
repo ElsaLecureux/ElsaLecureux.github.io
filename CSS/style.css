@@ -15,8 +15,8 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: black;
-    -webkit-transition: background-color 2s ease-out;
+    background-color: #0B1C3E;
+    -webkit-transition: background-color 1.8s ease-out;
 }
 main {
     width: 100vw;
@@ -31,7 +31,7 @@ main {
 }    
 .carousel_wrap {
     height: 100%;
-    width: 25rem;
+    width: 35rem;
     display: flex;
     align-items: center;
     overflow-x: scroll;
@@ -43,7 +43,7 @@ main {
 
 img {
     border-radius:3rem; 
-    width: 25rem; 
+    width: 35rem; 
     position: relative;  
 }
 h2 {
@@ -100,4 +100,13 @@ h2 {
 }
 .backgroundBlue{
     background-color: #0043fd70; 
+}
+.LeftButton{
+    
+}
+.RightButton{
+    
+}
+.visible{
+    visibility: hidden;
 }
