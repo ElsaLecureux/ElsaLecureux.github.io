@@ -12,6 +12,7 @@ const app = {
     LeftButtonElm: document.querySelector('.LeftButton'),
     RightButtonElm: document.querySelector('.RightButton'),
     ModalElm: document.querySelector('.modal'),
+    ModalContentElm: document.querySelectorAll('.modal_content'),
     backgroundColors:['#0B1C3E','#9DA598', '#C77461', '#4AA8D9', '#CE6535', '#607748'],
     index: 0,
     
@@ -61,15 +62,26 @@ const app = {
     },
 
     onClickItem() {
-        app.ModalElm.style.display = 'block';
+        app.ModalElm.style.background= app.backgroundColors[app.index];
+        for (const elm of app.ModalContentElm) {
+            let modalNumber = app.index+1;
+            if (elm.classList.contains(`${modalNumber}`)) {
+                elm.style.display = 'flex';
+            } else {
+                elm.style.display = 'none';
+            }  
+        }
+        app.ModalElm.style.display = 'block'; 
         /*app.CarouselWrapElm.style.display = 'none';
         app.LeftButtonElm.style.display = 'none';
-        app.RightButtonElm.style.display = 'none';*/
+        app.RightButtonElm.style.display = 'none';*/ 
     },         
     
     addListenerToCloseModal () {
-        const closeModalButton = document.querySelector('.closeModalButton');
-        closeModalButton.addEventListener('click', app.closeModal);
+        const closeModalButtons = document.querySelectorAll('.closeModalButton');
+        for (button of closeModalButtons) {
+        button.addEventListener('click', app.closeModal);
+        }
     },
 
     closeModal () {
