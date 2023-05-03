@@ -102,10 +102,20 @@ h2 {
     background-color: #0043fd70; 
 }
 .LeftButton{
-    
+    margin-right: 2rem;
 }
 .RightButton{
-    
+    margin-left: 2rem;
+}
+.button{
+    height: 5rem;
+    width: 5rem;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+}
+.img_button{
+    height: 100%;
+    width: 100%;
 }
 .visible{
     visibility: hidden;
