@@ -15,7 +15,8 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    /*background-color: black;*/
+    background-color: black;
+    -webkit-transition: background-color 2s ease-out;
 }
 main {
     width: 100vw;

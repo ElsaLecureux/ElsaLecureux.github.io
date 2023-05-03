@@ -1,6 +1,7 @@
 const app = {
 
     init: function () {
+        app.index = 0
         app.addListenerToButtons();
         app.addListenerToCarouselItems();
         app.addListenerToCloseModal();
@@ -11,8 +12,9 @@ const app = {
     LeftButtonElm: document.querySelector('.LeftButton'),
     RightButtonElm: document.querySelector('.RightButton'),
     ModalElm: document.querySelector('.modal'),
-    BackgroundContainerElm: document.querySelector('.backgrounds_container'),
-    BackgroundElm: document.querySelector('.background'),
+    backgroundColors:['#97C3DE', 'blue', 'red', 'pink', 'purple'],
+    index: 0,
+    
 
     addListenerToButtons () {
         app.LeftButtonElm.addEventListener('click', app.OnclickLeftButton);
@@ -20,16 +22,33 @@ const app = {
     },
 
     OnclickLeftButton (event) {
-        const slideWidth = app.Slide.clientWidth;
-        app.CarouselWrapElm.scrollLeft -= slideWidth;
-        const backgroundWidth = app.BackgroundElm.clientWidth;
-        app.BackgroundContainerElm.scrollLeft -= backgroundWidth;
+        if (app.index > 0) {
+            document.body.style.background= app.backgroundColors[app.index];
+            app.index = app.index - 1;
+            const slideWidth = app.Slide.clientWidth;
+            app.CarouselWrapElm.scrollLeft -= slideWidth; 
+        } 
+        /*if (app.index > 0) {
+            app.LeftButtonElm.style.visibility = 'visible';
+            
+        }
+        else {
+            app.LeftButtonElm.style.visibility = 'hidden';
+        } */                       
     },
     OnclickRightButton (event) {
+        if (app.index < 6) {
+        document.body.style.background= app.backgroundColors[app.index];
+        app.index = app.index + 1;
         const slideWidth = app.Slide.clientWidth;
         app.CarouselWrapElm.scrollLeft += slideWidth;
-        const backgroundWidth = app.BackgroundElm.clientWidth;
-        app.BackgroundContainerElm.scrollLeft += backgroundWidth;
+        }
+        /*if (app.index === 5) {
+            app.RightButtonElm.style.visibility = 'hidden';
+        }
+        else {
+            app.RightButtonElm.style.visibility = 'visible';
+        }*/
     },    
 
     addListenerToCarouselItems () {
