@@ -13,7 +13,7 @@ const app = {
     RightButtonElm: document.querySelector('.RightButton'),
     ModalElm: document.querySelector('.modal'),
     ModalContentElm: document.querySelectorAll('.modal_content'),
-    backgroundColors:['#0B1C3E','#9DA598', '#C77461', '#4AA8D9', '#CE6535', '#607748'],
+    backgroundColors:['#0B1C3E','#9DA598', '#607748', '#C77461','#4AA8D9', '#CE6535' ],
     index: 0,
     
 

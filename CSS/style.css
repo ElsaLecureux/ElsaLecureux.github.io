@@ -1,17 +1,48 @@
 /*variables*/
 @font-face {
-    font-family: 'Aquatico';
-    src: url(../fonts/Aquatico-Regular.otf);  
+    font-family: 'OneDay';
+    src: url(../fonts/ONEDAY.otf);  
+}
+@font-face {
+    font-family: 'Munich';
+    src: url(../fonts/MUNICH\ SANS.ttf);  
 }
 @font-face {
     font-family: 'Porta';
     src: url(../fonts/Potra.ttf); 
 }
 @font-face {
-    font-family: 'Abysso';
-    src: url(../fonts/abyssopelagic.otf);
+    font-family: 'qg';
+    src: url(../fonts/QG.ttf);
 }
-
+@font-face {
+    font-family: 'gasalt';
+    src: url(../fonts/Gasalt-Regular.ttf);
+}
+@font-face {
+    font-family: 'infinity';
+    src: url(../fonts/Infinity.ttf);
+}
+@font-face {
+    font-family: 'moka';
+    src: url(../fonts/Moka-Regular.otf);
+}
+@font-face {
+    font-family: 'planer';
+    src: url(../fonts/Planer-Regular.ttf);
+}
+@font-face {
+    font-family: 'quark';
+    src: url(../fonts/Quark-Bold.otf);
+}
+@font-face {
+    font-family: 'thinoo';
+    src: url(../fonts/thinoothin.otf);
+}
+@font-face {
+    font-family: 'Manifesto';
+    src: url(../fonts/MANIFESTO.ttf);
+}
 
 :root {
     --darkGreyColor: #323639;
@@ -23,7 +54,7 @@
 /* Document */
 
 body {
-    font-family: 'Roboto';
+    font-family: 'Pathway Extreme';
     height: 100vh;
     display: flex;
     align-items: center;
@@ -33,11 +64,16 @@ body {
     -webkit-transition: background-color 1.8s ease-out;
 }
 .header_title{
-    margin-top: 1rem;
+    margin-top: 3rem;
     color: white;
     font-size: 3rem;
-    font-weight: 700;
-    font-family: 'Aquatico';
+    font-family: 'OneDay';
+}
+.header_subtitle{
+    color: white;
+    margin-top: 0.8rem;
+    font-size: 2rem;
+    font-family: 'OneDay';
 }
 main {
     width: 100%;
@@ -71,7 +107,7 @@ main {
     position: relative;
     bottom: 2rem;
     text-align: center;
-    font-size: 2.5vw;
+    font-size: 3rem;
     color: white;
     font-family: 'Bruno Ace';
 }
@@ -120,40 +156,77 @@ main {
     min-height: 50rem;*/
     border-radius: 1rem;
 }
-/*A propos*/
+h3{
+    font-family: 'Manifesto';
+    margin: 1rem;
+    font-size: 2rem;
+}
+
 .modal_content{
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
+    overflow-x: scroll;
+    overflow-x: hidden;
+    
+    /*background-color: #acacac;*/
 }
-.apropos_title{
-    font-family: 'Aquatico';
+.apropos_title, .parcours_title, .competences_title, .projets_title, .experiences_title, .realisations_title{
+    font-family: 'Manifesto';
     margin: 1rem;
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: 700;
+    /*text-shadow: 2px 2px 4px rgb(250, 250, 250);*/
 }
+.closeModalButton{
+    border-radius: 25px;
+    border: white solid 2px;
+    background-color: rgba(255, 255, 255, 0);
+    color: white;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+}
+.closeModalButton:hover{
+    background-color: white;
+    color: rgba(255, 255, 255, 0);
+}
+/*A propos*/
 .apropos_container{
     display: flex;
 }
+.photoinfos_container{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
 .infoscontacts_container{
     display: flex;
-    flex-direction: column;
-
+    background-color: #27395e98;
+    height: 45vh;
 }
-.infosphoto_container{
-    display: flex;
-}
-.infos_container{
+.infoshobbies_container{
     display: flex;
     flex-direction: column;
 }
 .photoResume{
-    border-radius:30% 70% 70% 30% / 30% 30% 70% 70%  ;
-    border: #DF4630 solid 3px;
-    height: 10rem;
+    /*border: #DF4630 solid 3px;*/
+    height: 45vh;
 }
-
+/*Realisations*/
+.img_agz_container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.img_agz{
+    width: 45vh;
+}
+.img_calculator{
+    width: 45vh;
+}
+.img_navbar{
+    width: 45vh;
+}
+/*Background*/
 .backgrounds_container{
     display: flex;
     flex-wrap: nowrap;
@@ -164,6 +237,7 @@ main {
     width: 100%;
     overflow-x: scroll;
     scroll-behavior: smooth;
+    
 }
 .backgrounds_container::-webkit-scrollbar {
     display: none;
