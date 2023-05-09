@@ -6,7 +6,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Pathway+Extreme&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Bruno+Ace&family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   
@@ -22,7 +21,7 @@
   </header>
     <main> 
     <div class="modal fade-in">
-      <div class="modal_content 1">
+      <div class="modal_content 1 apropos_container">
         <h2 class="apropos_title">INFORMATIONS</h2>
         <div class="photoinfos_container">
           <img src="./images/photoresume.jpg" alt="" class="photoResume">
@@ -31,23 +30,23 @@
               <div class="infos_container">
                 <h3 class="infoscontacts_title">Informations personnelles</h3>
                 <p>34ans</p>
-                <p>Mariée et un enfant</p>
-                <p>69004 Lyon</p>
+                <p>Mariée, un enfant</p>
+                <p><img src="./images/pin.svg" alt=""> 69004 Lyon</p>
               </div>
               <div class="hobbies_container">
                 <h3 class="hobbies_title">Hobbies</h3>
-                <p>Yoga</p>
-                <p>Voyage</p>
+                <p><img src="./images/yoga.svg" alt=""> Yoga</p>
+                <p><img src="./images/compass.svg" alt=""> Voyage</p>
                 <p>Ecriture: projet d'un livre de fantasy</p>
                 <p>Lecture</p>
               </div>           
             </div> 
             <div class="contacts_container">
               <h3 class="contacts_title">Contacts</h3>
-              <p>04 49 59 14 36</p>
-              <p>elsa.lecureux@gmail.com</p>
-              <p> LinkedIn</p>
-              <p>Github</p>
+              <p> 04 49 59 14 36</p>
+              <a href=""><p><img src="./images/mail.svg" alt=""> elsa.lecureux@gmail.com</p></a>
+              <a href=""><p><img src="./images/linkedin.svg" alt=""> LinkedIn</p></a>
+              <a href=""><p><img src="./images/github.svg" alt=""> Github</p></a>
             </div>        
           </div>
         </div>
@@ -67,16 +66,22 @@
         <button class="closeModalButton">Close</button>
       </div>
       <div class="modal_content 4">
-        <h2 class="competences_title">CONNAISSANCES</h2> 
+        <h2 class="competences_title">Competences</h2> 
         <h3 class="softskills_title">Soft Skills</h3>
-        <p>Esprit d'équipe</p> 
-        <p>Créative</p>
-        <p>Curieuse</p> 
-        <h3>Compétences</h3>   
+        <p><div class="softskills_item teamspirit"></div> Esprit d'équipe</p> 
+        <p><div class="softskills_item teamspirit"></div>Autonome</p>
+        <p><div class="softskills_item teamspirit"></div>Capacité à s'adapter</p>        
+        <p><div class="softskills_item teamspirit"></div>Créative</p>
+        <p><div class="softskills_item teamspirit"></div>Curieuse</p> 
+        <h3>Connaissances</h3>   
         <h4>languages</h4>
-        <h4>methodes</h4>
-        <h4>architecture</h4>
-        <h4>outils</h4>
+        <p>HTML, CSS, JAVASCRIP, SQL</p>
+        <h4>Méthodes</h4>
+        <p>Agile, Ajax</p>
+        <h4>Architecture</h4>
+        <p>MVC, API, Programmation Orientée Objet</p>
+        <h4>Outils</h4>
+        <p>Reract, Git, Express, Sequelize, NodeJS</p>
         <button class="closeModalButton">Close</button>
       </div>
       <div class="modal_content 6">
@@ -97,15 +102,37 @@
         <a href="https://arcadian-game-zone.herokuapp.com/">Le site</a>
         <h3>Calculator</h3>
         <p>Une calculette pour faire des opérations simples réalisée avec React</p>
-        <img src="./images/calculator_double.png" alt="" class="img_calculator">
-        <img src="./images/calculator_multiplication.png" alt="" class="img_calculator">
+        <div class="img_calculator_container">
+          <img src="./images/calculator_multi.png" alt="" class="img_calculator">
+          <img src="./images/calculator_multiplication.png" alt="" class="img_calculator">
+        </div>
+        
         <h3>GoogleFontsNavBar</h3>
         <p>Une copie de la NavBar de googleFonts pour m'entrainer sur CSS</p> 
         <img src="./images/googlefontsNavbar.png" alt="" class="img_navbar">     
         <button class="closeModalButton">Close</button>
       </div>
       <div class="modal_content 3">
-        <h2 class="Experiences_title">EXPERIENCES ET FORMATIONS</h2>
+        <h2 class="experiences_title">EXPERIENCES ET FORMATIONS</h2>
+        <div>
+          <h3>Expériences</h3>
+          <h4>Projet de fin de formation</h4>
+          <p>En situation, en équipe de 5personnes. Conception et réalisation d'une application web depuis 0:
+            <a href="https://arcadian-game-zone.herokuapp.com/">Arcadian Game Zone</a>
+          </p>
+        </div>
+        <div>
+          <h3>Formation et diplomes</h3>
+          <h4>Titre Professionnel Développeuse Web et Web Mobile</h4>
+          <p>Avril 2023</p>
+          <h4>Formation Développeuse Web et Web Mobile - fullstack JS</h4>
+          <h5>Ecole O'Clock</h5>
+          <p> Août 2022- Février 2023</p>
+          <h4>Brevet Technique des métiers Patissier Glacier Confiseur Traiteur</h4>
+          <h5>ESFROMA CHARLES PEGUY</h5>
+          <p>Octobre 2012</p>
+
+        </div>           
         <button class="closeModalButton">Close</button>
       </div>
     </div> 
@@ -115,10 +142,10 @@
       <div class="carousel_item"><figure><img src="./images/mountainStars.jpg" alt="" class="image_carousel"><h2 class="title_carousel">INFORMATIONS</h2></figure></div>
       <div class="carousel_item"><figure><img src="./images/joshuaTree.jpg" alt="" class="image_carousel"><h2 class="title_carousel">PARCOURS</h2></figure></div>
       <div class="carousel_item"><figure><img src="./images/forrest.jpg" alt="" class="image_carousel"><h2 class="title_carousel">EXPERIENCES ET FORMATIONS</h2></figure></div> 
-      <div class="carousel_item"><figure><img src="./images/beach.jpg" alt="" class="image_carousel"><h2 class="title_carousel">CONNAISSANCES</h2></figure></div>
+      <div class="carousel_item"><figure><img src="./images/beach.jpg" alt="" class="image_carousel"><h2 class="title_carousel">COMPETENCES</h2></figure></div>
       <div class="carousel_item"><figure><img src="./images/mountainLake.jpg" alt="" class="image_carousel"><h2 class="title_carousel">REALISATIONS</h2></figure></div>
       <div class="carousel_item"><figure><img src="./images/palmTrees.jpg" alt="" class="image_carousel"><h2 class="title_carousel">PROJETS</h2></figure></div>    
-     </div>
+    </div>
     <button class="RightButton button"><img src="./images/arrow_right.svg" alt="" class="img_button"></button>
   </div>
  <footer id="footer"> 
