@@ -29,7 +29,7 @@ body {
     justify-content: center;
     flex-direction: column;
     background-color: #0B1C3E;
-    -webkit-transition: background-color 1.8s ease-out;
+    -webkit-transition: background-color 1.2s ease-out;
 }
 .header_title{
     margin-top: 3rem;
@@ -73,7 +73,9 @@ a {
 .image_carousel {
     border-radius:3rem; 
     width: 35rem; 
-    position: relative;  
+    position: relative;
+    opacity: 1;
+    -webkit-transition: opacity 1.2s ease-out;
 }
 .title_carousel {
     position: relative;
@@ -82,6 +84,7 @@ a {
     font-size: 4.5rem;
     color: white;
     font-family: 'Munich';
+    -webkit-transition: opacity 1.2s ease-out;
 }
 .modal{
     color: white;
@@ -120,7 +123,7 @@ a {
 .modal_content{
     position: absolute;
     top: 16%;
-    left: 24%;
+    left: 18%;
     width: 60%;
     height: 70%;
     padding: 1rem;
