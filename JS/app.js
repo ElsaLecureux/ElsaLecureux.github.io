@@ -30,9 +30,20 @@ const app = {
             app.index = app.index - 1;
             /*const slideWidth = app.Slide.clientWidth;
             app.CarouselWrapElm.scrollLeft -= slideWidth;*/
-            document.body.style.background= app.backgroundColors[app.index];           
+            document.body.style.background= app.backgroundColors[app.index];
+            app.Slide[app.index].style.opacity = '0';
+            transition.ontransitionstart = () => {
+                app.Slide[app.index+1].style.opacity = '0';
+            }           
+            app.Slide[app.index].style.opacity = '1';
             app.Slide[app.index].classList.toggle('selected');               
             app.Slide[app.index+1].classList.toggle('selected');
+            const transition = document.querySelector('.body');
+            transition.ontransitionend = () => {
+                app.Slide[app.index].style.opacity = '1';
+            }
+            
+ 
            
                
         } 
@@ -47,8 +58,16 @@ const app = {
         if (app.index < 6) {
         app.index = app.index + 1;
         document.body.style.background= app.backgroundColors[app.index];
-        app.Slide[app.index].classList.toggle('selected');               
-        app.Slide[app.index-1].classList.toggle('selected');
+        const transition = document.querySelector('.body');
+        transition.ontransitionstart = () => {
+            app.Slide[app.index-1].style.opacity = '0';
+            app.Slide[app.index-1].classList.toggle('selected');
+        }
+        transition.ontransitionend = () => {
+                app.Slide[app.index].style.opacity = '0';
+                app.Slide[app.index].classList.toggle('selected');               
+                app.Slide[app.index].style.opacity = '1';
+            }
         /*const slideWidth = app.Slide.clientWidth;
         app.CarouselWrapElm.scrollLeft += slideWidth;*/
         }

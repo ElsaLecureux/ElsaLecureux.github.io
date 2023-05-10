@@ -29,7 +29,7 @@ body {
     justify-content: center;
     flex-direction: column;
     background-color: #0B1C3E;
-    -webkit-transition: background-color 1.8s ease-out;
+    -webkit-transition: background-color 0.8s ease-out;
 }
 .header_title{
     margin-top: 3rem;
@@ -66,14 +66,17 @@ a {
     align-items: center;
     overflow-x: scroll;
     scroll-behavior: smooth;*/
+    
 }
 /*.carousel_wrap::-webkit-scrollbar {
     display: none;
 }*/
 .carousel_item{
-    display: none;
+  display: none;
+  transition: opacity 1.2s ease-out;
+  
 }
-.selected{
+.selected{    
     display: block;
 }
 .image_carousel {
@@ -105,7 +108,7 @@ a {
 	animation-name: fadeInOpacity;
 	animation-iteration-count: 1;
 	animation-timing-function: ease-in;
-	animation-duration: 0.5s;
+	animation-duration: 0.8s;
 }
 
 @keyframes fadeInOpacity {
