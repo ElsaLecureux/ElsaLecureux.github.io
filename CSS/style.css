@@ -29,7 +29,7 @@ body {
     justify-content: center;
     flex-direction: column;
     background-color: #0B1C3E;
-    -webkit-transition: background-color 1.2s ease-out;
+    -webkit-transition: background-color 1.8s ease-out;
 }
 .header_title{
     margin-top: 3rem;
@@ -59,32 +59,35 @@ a {
     position: relative;   
 }    
 .carousel_wrap {
+    position: relative;
     height: 100%;
     width: 35rem;
-    display: flex;
+   /* display: flex;
     align-items: center;
     overflow-x: scroll;
-    scroll-behavior: smooth;
+    scroll-behavior: smooth;*/
 }
-.carousel_wrap::-webkit-scrollbar {
+/*.carousel_wrap::-webkit-scrollbar {
+    display: none;
+}*/
+.carousel_item{
     display: none;
 }
-
+.selected{
+    display: block;
+}
 .image_carousel {
     border-radius:3rem; 
     width: 35rem; 
-    position: relative;
-    opacity: 1;
-    -webkit-transition: opacity 1.2s ease-out;
+   position: absolute;
 }
 .title_carousel {
-    position: relative;
-    bottom: 2.5rem;
-    text-align: center;
+    position: absolute;
+    /*bottom: 2.5rem;*/
+    /*text-align: center;*/
     font-size: 4.5rem;
     color: white;
     font-family: 'Munich';
-    -webkit-transition: opacity 1.2s ease-out;
 }
 .modal{
     color: white;
@@ -123,7 +126,7 @@ a {
 .modal_content{
     position: absolute;
     top: 16%;
-    left: 18%;
+    left: 24%;
     width: 60%;
     height: 70%;
     padding: 1rem;

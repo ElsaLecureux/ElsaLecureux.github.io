@@ -8,14 +8,11 @@ const app = {
     },
     CarouselElm: document.querySelector('.carousel'),
     CarouselWrapElm: document.querySelector('.carousel_wrap'),
-    Slide: document.querySelector('.image_carousel'),
+    Slide: document.querySelectorAll('.carousel_item'),
     LeftButtonElm: document.querySelector('.LeftButton'),
     RightButtonElm: document.querySelector('.RightButton'),
     ModalElm: document.querySelector('.modal'),
-    titleCarouselElm:document.querySelector('.title_carousel'),
     ModalContentElm: document.querySelectorAll('.modal_content'),
-    slides:['./images/mountainStars.jpg','./images/joshuaTree.jpg', './images/forrest.jpg', './images/beach.jpg','./images/mountainLake.jpg', './images/palmTrees.jpg' ],
-    titles:['INFORMATIONS','PARCOURS', 'EXPERIENCES ET FORMATIONS', 'COMPETENCES','REALISATIONS', 'PROJETS' ],
     backgroundColors:['#0B1C3E','#9DA598', '#607748', '#C77461','#4AA8D9', '#CE6535' ],
     index: 0,
     
@@ -31,17 +28,13 @@ const app = {
         
         if (app.index > 0) {
             app.index = app.index - 1;
-            app.Slide.style.opacity = '0';
-            app.titleCarouselElm.style.opacity = '0';           
-            document.body.style.background= app.backgroundColors[app.index];  
-            const transition = document.querySelector('.body');
-                transition.ontransitionend = () => {
-                    console.log("Transition ended");
-                    app.Slide.src= app.slides[app.index];         
-                    app.titleCarouselElm.textContent=app.titles[app.index];
-                    app.Slide.style.opacity = '1';
-                    app.titleCarouselElm.style.opacity = '1';
-            };            
+            /*const slideWidth = app.Slide.clientWidth;
+            app.CarouselWrapElm.scrollLeft -= slideWidth;*/
+            document.body.style.background= app.backgroundColors[app.index];           
+            app.Slide[app.index].classList.toggle('selected');               
+            app.Slide[app.index+1].classList.toggle('selected');
+           
+               
         } 
         if (app.index === 0) {
             app.LeftButtonElm.classList.add('visible');  
@@ -52,17 +45,12 @@ const app = {
     },
     OnclickRightButton (event) {
         if (app.index < 6) {
-        app.index = app.index + 1;app.Slide.style.opacity = '0';
-        app.titleCarouselElm.style.opacity = '0';           
-        document.body.style.background= app.backgroundColors[app.index];  
-        const transition = document.querySelector('.body');
-            transition.ontransitionend = () => {
-                console.log("Transition ended");
-                app.Slide.src= app.slides[app.index];         
-                app.titleCarouselElm.textContent=app.titles[app.index];
-                app.Slide.style.opacity = '1';
-                app.titleCarouselElm.style.opacity = '1';
-        };  
+        app.index = app.index + 1;
+        document.body.style.background= app.backgroundColors[app.index];
+        app.Slide[app.index].classList.toggle('selected');               
+        app.Slide[app.index-1].classList.toggle('selected');
+        /*const slideWidth = app.Slide.clientWidth;
+        app.CarouselWrapElm.scrollLeft += slideWidth;*/
         }
         if (app.index > 0) {
             app.LeftButtonElm.classList.remove('visible');  
