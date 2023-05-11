@@ -29,7 +29,7 @@ body {
     justify-content: center;
     flex-direction: column;
     background-color: #0B1C3E;
-    -webkit-transition: background-color 0.8s ease-out;
+    -webkit-transition: background-color 1.6s ease-in;
 }
 .header_title{
     margin-top: 3rem;
@@ -73,8 +73,8 @@ a {
 }*/
 .carousel_item{
   display: none;
-  transition: opacity 1.2s ease-out;
-  
+  /*transition: opacity 1.2s ease-out;  */
+  transition: opacity 0.8s ease-in-out;
 }
 .selected{    
     display: block;

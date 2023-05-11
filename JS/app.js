@@ -31,17 +31,16 @@ const app = {
             /*const slideWidth = app.Slide.clientWidth;
             app.CarouselWrapElm.scrollLeft -= slideWidth;*/
             document.body.style.background= app.backgroundColors[app.index];
-            app.Slide[app.index].style.opacity = '0';
-            transition.ontransitionstart = () => {
-                app.Slide[app.index+1].style.opacity = '0';
-            }           
+            /*app.Slide[app.index].style.opacity = '0';*/
+            setTimeout(() => {
+                console.log("Retardée d'une seconde.");
+              }, 1000)        
+            app.Slide[app.index+1].style.opacity = '0';
+            app.Slide[app.index+1].classList.toggle('selected');
             app.Slide[app.index].style.opacity = '1';
             app.Slide[app.index].classList.toggle('selected');               
-            app.Slide[app.index+1].classList.toggle('selected');
             const transition = document.querySelector('.body');
-            transition.ontransitionend = () => {
-                app.Slide[app.index].style.opacity = '1';
-            }
+            
             
  
            
@@ -59,15 +58,21 @@ const app = {
         app.index = app.index + 1;
         document.body.style.background= app.backgroundColors[app.index];
         const transition = document.querySelector('.body');
-        transition.ontransitionstart = () => {
-            app.Slide[app.index-1].style.opacity = '0';
+        app.Slide[app.index-1].style.opacity = '0';
+        setTimeout(() => {
+            console.log("Retardée d'une seconde.");
             app.Slide[app.index-1].classList.toggle('selected');
-        }
-        transition.ontransitionend = () => {
-                app.Slide[app.index].style.opacity = '0';
-                app.Slide[app.index].classList.toggle('selected');               
-                app.Slide[app.index].style.opacity = '1';
-            }
+            app.Slide[app.index].classList.toggle('selected');               
+            app.Slide[app.index].style.opacity = '0';
+        }, 805)
+        setTimeout(() => {
+            console.log("Retardée plus tard.");
+            app.Slide[app.index].style.opacity = '1';
+                           
+          }, 820)
+           /* app.Slide[app.index].style.opacity = '0';*/
+        
+       
         /*const slideWidth = app.Slide.clientWidth;
         app.CarouselWrapElm.scrollLeft += slideWidth;*/
         }
