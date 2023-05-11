@@ -95,11 +95,12 @@ footer{
     border-radius:3rem; 
     width: 35rem; 
     position: relative;
-  
+    display: block;
 }
 .title_carousel {
     position: absolute;
-    text-align: center;
+    top: 15rem;
+    left: 3rem;
     font-size: 4.5rem;
     color: white;
     font-family: 'Munich';
