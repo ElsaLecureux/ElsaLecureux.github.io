@@ -14,6 +14,7 @@ const app = {
     ModalContentElm: document.querySelectorAll('.modal_content'),
     backgroundColors:['#0B1C3E','#9DA598', '#607748', '#C77461','#4AA8D9', '#CE6535' ],
     index: 0,
+    clickTimeout: false,
     
 
     addListenerToButtons () {
@@ -24,51 +25,57 @@ const app = {
     },
 
     OnclickLeftButton (event) {
-        
-        if (app.index > 0) {
-            app.index = app.index - 1;
-            document.body.style.background= app.backgroundColors[app.index];      
-            const transition = document.querySelector('.body');
-            app.CarouselItemsElm[app.index+1].style.opacity = '0';
-            setTimeout(() => {
-                console.log("Retardée d'une seconde.");
-                app.CarouselItemsElm[app.index+1].classList.toggle('selected');
-                app.CarouselItemsElm[app.index].style.opacity = '0';
-                app.CarouselItemsElm[app.index].classList.toggle('selected');                
-            }, 805)
-            setTimeout(() => {
-                console.log("Retardée plus tard.");
-                app.CarouselItemsElm[app.index].style.opacity = '1';
-              }, 820)
-        } 
-        if (app.index === 0) {
-            app.LeftButtonElm.classList.add('visible');  
-        }
-        if (app.index < 5) {
-            app.RightButtonElm.classList.remove('visible');  
-        }              
+        if (app.clickTimeout === false) {
+            app.clickTimeout = true
+            if (app.index > 0) {
+                app.index = app.index - 1;
+                document.body.style.background= app.backgroundColors[app.index];      
+                const transition = document.querySelector('.body');
+                app.CarouselItemsElm[app.index+1].style.opacity = '0';
+                setTimeout(() => {
+                    app.CarouselItemsElm[app.index+1].classList.toggle('selected');
+                    app.CarouselItemsElm[app.index].style.opacity = '0';
+                    app.CarouselItemsElm[app.index].classList.toggle('selected');                
+                }, 805)
+                setTimeout(() => {  
+                    app.CarouselItemsElm[app.index].style.opacity = '1';
+                    app.clickTimeout = false;
+                  }, 820)
+            } 
+            if (app.index === 0) {
+                app.LeftButtonElm.classList.add('visible');  
+            }
+            if (app.index < 5) {
+                app.RightButtonElm.classList.remove('visible');  
+            }              
+        }         
     },
     OnclickRightButton (event) {
-        if (app.index < 6) {
-        app.index = app.index + 1;
-        document.body.style.background= app.backgroundColors[app.index];
-        const transition = document.querySelector('.body');
-        app.CarouselItemsElm[app.index-1].style.opacity = '0';
-        setTimeout(() => {
-            app.CarouselItemsElm[app.index-1].classList.toggle('selected');
-            app.CarouselItemsElm[app.index].style.opacity = '0';
-            app.CarouselItemsElm[app.index].classList.toggle('selected');               
-        }, 805)
-        setTimeout(() => {
-            app.CarouselItemsElm[app.index].style.opacity = '1';
-          }, 820)
+        if (app.clickTimeout === false) {
+            app.clickTimeout = true
+            if (app.index < 6) {
+                app.index = app.index + 1;
+                document.body.style.background= app.backgroundColors[app.index];
+                const transition = document.querySelector('.body');
+                app.CarouselItemsElm[app.index-1].style.opacity = '0';
+                setTimeout(() => {
+                    app.CarouselItemsElm[app.index-1].classList.toggle('selected');
+                    app.CarouselItemsElm[app.index].style.opacity = '0';
+                    app.CarouselItemsElm[app.index].classList.toggle('selected');               
+                }, 805)
+                setTimeout(() => {
+                    app.CarouselItemsElm[app.index].style.opacity = '1';
+                    app.clickTimeout = false;
+                  }, 820)
+                }
+                if (app.index > 0) {
+                    app.LeftButtonElm.classList.remove('visible');  
+                }
+                if (app.index === 5) {
+                    app.RightButtonElm.classList.add('visible');  
+                } 
         }
-        if (app.index > 0) {
-            app.LeftButtonElm.classList.remove('visible');  
-        }
-        if (app.index === 5) {
-            app.RightButtonElm.classList.add('visible');  
-        } 
+        
     },    
 
     addListenerToCarouselItems () {
