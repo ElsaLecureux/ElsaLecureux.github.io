@@ -6,6 +6,7 @@ const app = {
         app.addListenerToCarouselItems();
         app.addListenerToCloseModal();
     },
+    CarouselElm: document.querySelector('.carousel'),
     CarouselWrapElm: document.querySelector('.carousel_wrap'),
     CarouselItemsElm: document.querySelectorAll('.carousel_item'),
     LeftButtonElm: document.querySelector('.LeftButton'),
@@ -13,6 +14,7 @@ const app = {
     ModalElm: document.querySelector('.modal'),
     ModalContentElm: document.querySelectorAll('.modal_content'),
     backgroundColors:['#0B1C3E','#9DA598', '#607748', '#C77461','#4AA8D9', '#CE6535' ],
+    backgroundColorsModals:['#0B1C3E00','#9DA59800', '#60774800', '#C7746100','#4AA8D900', '#CE653500' ],
     index: 0,
     clickTimeout: false,
     
@@ -85,7 +87,7 @@ const app = {
     },
 
     onClickItem() {
-        app.ModalElm.style.background= app.backgroundColors[app.index];
+        app.ModalElm.style.background= app.backgroundColorsModals[app.index];
         for (const elm of app.ModalContentElm) {
             let modalNumber = app.index+1;
             if (elm.classList.contains(`${modalNumber}`)) {
@@ -93,11 +95,13 @@ const app = {
             } else {
                 elm.style.display = 'none';
             }  
-        }
-        app.ModalElm.style.display = 'block'; 
+        };        
+        app.CarouselElm.style.display= 'none';
+        app.ModalElm.style.display = 'flex'; 
     },         
     
     addListenerToCloseModal () {
+        app.ModalElm.addEventListener('click', app.closeModal);
         const closeModalButtons = document.querySelectorAll('.closeModalButton');
         for (button of closeModalButtons) {
         button.addEventListener('click', app.closeModal);
@@ -106,6 +110,7 @@ const app = {
 
     closeModal () {
         app.ModalElm.style.display = 'none';
+        app.CarouselElm.style.display= 'flex';
     },
 }
 
