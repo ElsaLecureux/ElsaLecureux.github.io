@@ -14,7 +14,7 @@ const app = {
     ModalElm: document.querySelector('.modal'),
     ModalContentElm: document.querySelectorAll('.modal_content'),
     backgroundColors:['#0B1C3E','#9DA598', '#607748', '#C77461','#4AA8D9', '#CE6535' ],
-    backgroundColorsModals:['#0B1C3E00','#9DA59800', '#60774800', '#C7746100','#4AA8D900', '#CE653500' ],
+    backgroundColorsModals:['#0B1C3E00','#9DA59800', '#60774800', '#C7746100','#4AA8D900', '#CE653500'],
     index: 0,
     clickTimeout: false,
     
