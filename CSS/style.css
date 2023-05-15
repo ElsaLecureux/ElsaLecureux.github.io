@@ -59,15 +59,7 @@ a {
     font-size: 2rem;
     font-family: 'OneDay';
 }
-/*footer*/
-footer{
-    color: white;
-    text-align: center;
-    height: 5%;
-    position: absolute;
-    bottom: 0;
 
-}
 /*main*/
 .contacts_container{
     display: flex;
@@ -124,7 +116,6 @@ footer{
     left: 0;
     width: 100vw;
     height: 100vh;
-    padding-top: 4rem;
 }
 .fade-in {
 	opacity: 1;
@@ -197,25 +188,27 @@ footer{
 }
 /*A propos*/
 .apropos_container{
+    justify-content: center;
+
 
 }
 .stylingBand_picture{
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     height: 55vh;
-    width: 15vw;
+    width: 13vw;
     background-color: #ffffff;
-    border-radius: 15rem;
     color: #0B1C3E;
 }
 .photoinfos_container{
+    width: 100%;
     display: flex;
-    align-items: center;
+    justify-content: space-between;
 }
 .photoResume{
-    height: 20vh;
+    height: 17vh;
     border-radius: 10rem;  
     border: #0B1C3E solid 6px;        
 }
@@ -304,4 +297,23 @@ footer{
 }
 .visible{
     visibility: hidden;
+}
+/*footer*/
+#footer{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 12%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 1rem;
+}
+.footer_title{
+    position: absolute;
+    bottom: 0;
+}
+.contacts_container{
+
 }
