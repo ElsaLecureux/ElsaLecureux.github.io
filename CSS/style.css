@@ -42,6 +42,7 @@ a {
     color: rgb(251, 251, 153);
     text-decoration: none;
 }
+
 /*header*/
 .header{
     width: 100%;
@@ -56,6 +57,7 @@ a {
 .header_subtitle{
     color: white;
     margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
     font-size: 2rem;
     font-family: 'OneDay';
 }
@@ -146,10 +148,11 @@ a {
     flex-direction: column;
     align-items: center; 
     width: 60%;
-    height: 70%;
     border-radius: 1rem;
 }
+
 .realisation_container{
+    height: 60%;
     overflow-y: scroll;
 }
 ::-webkit-scrollbar {
@@ -170,7 +173,8 @@ a {
 }
 .modalSubtitle{
     font-family: 'Manifesto';
-    margin-bottom: 1rem;
+    margin: 1rem 0;
+
     font-size: 1.5rem;
 }
 .closeModalButton{
@@ -180,7 +184,7 @@ a {
     color: white;
     padding: 0.5rem;
     font-size: 1.2rem;
-    margin-top: 2rem;
+    margin-top: 2vh;
 }
 .closeModalButton:hover{
     background-color: white;
@@ -189,23 +193,19 @@ a {
 /*A propos*/
 .apropos_container{
     justify-content: center;
-
-
 }
 .stylingBand_picture{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
-    height: 55vh;
     width: 13vw;
-    background-color: #ffffff;
-    color: #0B1C3E;
+    color: #ffffff;
 }
 .photoinfos_container{
-    width: 100%;
+    width: 70%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 .photoResume{
     height: 17vh;
@@ -215,7 +215,6 @@ a {
 .titleinfos_container{
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 .infoscontacts_container{
     display: flex;
@@ -232,13 +231,20 @@ a {
 }
 .infoshobbies_container{
     height: 100%;
-    display: flex;
-    
+    display: flex;    
     justify-content: space-evenly;
     margin-left: 1.5rem;
 }
-
-
+.hobbies_container{
+    margin-bottom: 0.8rem;
+}
+.infos_content{
+    line-height: 1.2rem;
+}
+/*Parcours*/
+.parcours_content{
+    text-align: justify;
+}
 /*Realisations*/
 .img_agz_container{
     display: flex;
@@ -257,6 +263,50 @@ a {
 }
 .img_navbar{
     width: 45vh;
+}
+/*Experience Formation*/
+.experienceFormation_container{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 70%;
+}
+.formation_title{
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+.formation_subtitle{
+    margin-bottom: 0.8rem;
+}
+.arcadian_link{
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+/*Competences*/
+.knowledge_title{
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+.competencesCategories_container{
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    width: 60%;
+}
+.knowledge_subtitle{
+    margin-bottom: 0.8rem;
+}
+.knowledge_subtitle:last-of-type{
+    margin-bottom: 0rem;
+}
+.softskills_content{
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+/*Projet*/
+.projet_content{
+    text-align: center;
 }
 /*Background*/
 .backgrounds_container{
@@ -304,10 +354,13 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 12%;
+    height: 14%;
     width: 100%;
     position: absolute;
     bottom: 0;
+    margin-bottom: 1rem;
+}
+.construction_sign{
     margin-bottom: 1rem;
 }
 .footer_title{
