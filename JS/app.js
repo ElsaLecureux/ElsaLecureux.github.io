@@ -38,11 +38,11 @@ const app = {
                     app.CarouselItemsElm[app.index+1].classList.toggle('selected');
                     app.CarouselItemsElm[app.index].style.opacity = '0';
                     app.CarouselItemsElm[app.index].classList.toggle('selected');                
-                }, 805)
+                }, 605)
                 setTimeout(() => {  
                     app.CarouselItemsElm[app.index].style.opacity = '1';
                     app.clickTimeout = false;
-                  }, 820)
+                  }, 620)
             } 
             if (app.index === 0) {
                 app.LeftButtonElm.classList.add('visible');  
