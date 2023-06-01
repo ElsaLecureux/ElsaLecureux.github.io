@@ -12,13 +12,7 @@
     src: url(../fonts/MANIFESTO.ttf);
 }
 
-:root {
-    --darkGreyColor: #323639;
-    --redColor: #DF4630;
-    --darkRedColor: #9A031E;
-    --greyColor: #ABA6A5;
-   
-}
+
 /* Document */
 
 body {

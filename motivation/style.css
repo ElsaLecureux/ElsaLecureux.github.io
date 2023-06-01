@@ -1,0 +1,90 @@
+@font-face {
+    font-family: 'Manifesto';
+    src: url(../fonts/MANIFESTO.ttf);
+}
+@font-face {
+    font-family: 'Munich';
+    src: url(../fonts/MUNICH\ SANS.ttf);  
+}
+body{
+    font-family: 'Pathway Extreme';
+    width: 100vw;
+    height: 100vh;
+    background-color: #FAF0CA;
+    color: #351C75;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.qualities_container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.qualities_title {
+    font-size: 5rem;
+    font-weight: 700;
+}
+.quality{
+    position: fixed;
+    display: none;
+    font-size: 2rem;
+}
+
+.organized{
+    bottom: 7rem;
+    left: 40rem;
+    color: #F95738;
+}
+.adaptability{
+    top: 7rem;
+    left: 40rem;
+    font-size: 2.5rem;
+    color: #EE964B;
+}
+.conscientious{
+    top: 15rem;
+    left: 15rem;
+    font-size: 2.3rem;
+    color: #F4D35E;
+    font-family: 'Manifesto';
+} 
+.autonomy{
+    bottom: 18rem;
+    right: 5rem;
+    font-size: 2.5rem;
+    color: #F4D35E;
+    font-family: 'Manifesto';
+}
+.creativity{
+    top: 20rem;
+    right: 20rem;
+    color: #F95738;
+}
+.teamspirit{
+    font-weight: 700;
+    font-size: 2.4rem;
+    bottom: 15rem;
+    left: 15rem;
+    color: purple;
+}
+.learning{
+    bottom: 7rem;
+    right: 30rem;
+    font-size: 4rem;
+    color: #EE964B;
+    font-family: 'Munich';
+}
+.communication{
+    top: 7rem;
+    right: 20rem;
+    color: purple;
+    font-size: 4rem;
+    font-family: 'Munich';
+}
+.visible{
+    display: block;
+}
